@@ -1,0 +1,111 @@
+{
+  "issue": "Asynchronous app startup can reach renderDashboard before dashboard.js has downloaded; the caught error persists after all scripts load.",
+  "fix": "App exposes clearTrailStart. The browser entry awaits it after all five UI scripts have loaded.",
+  "runtime_changes": [
+    "browser/app.js",
+    "browser/browser-entry.mjs"
+  ],
+  "local_delayed_http_regression": {
+    "actual_edge_browser": true,
+    "strict_no_eval_csp": true,
+    "backend": "deterministic read-only fixture",
+    "cases": [
+      {
+        "id": "original-empty-dashboard",
+        "passed": true,
+        "status": "renderDashboard is not defined",
+        "pre_dependency_requests": 4,
+        "writes": 0,
+        "early_mouse_click_blocked": true
+      },
+      {
+        "id": "candidate-empty-dashboard",
+        "passed": true,
+        "status": "Sarah is ready. Ask, compare and export without an API key or an installed model.",
+        "pre_dependency_requests": 0,
+        "writes": 0,
+        "early_mouse_click_blocked": true
+      },
+      {
+        "id": "candidate-saved-dashboard",
+        "passed": true,
+        "status": "Sarah is ready. Ask, compare and export without an API key or an installed model.",
+        "pre_dependency_requests": 0,
+        "writes": 0,
+        "early_mouse_click_blocked": true
+      },
+      {
+        "id": "candidate-saved-fixed",
+        "passed": true,
+        "status": "Sarah is ready. Ask, compare and export without an API key or an installed model.",
+        "pre_dependency_requests": 0,
+        "writes": 0,
+        "early_mouse_click_blocked": true
+      },
+      {
+        "id": "candidate-empty-responsive",
+        "passed": true,
+        "status": "Sarah is ready. Ask, compare and export without an API key or an installed model.",
+        "pre_dependency_requests": 0,
+        "writes": 0,
+        "early_mouse_click_blocked": true
+      },
+      {
+        "id": "candidate-empty-script-retry",
+        "passed": true,
+        "status": "Sarah is ready. Ask, compare and export without an API key or an installed model.",
+        "pre_dependency_requests": 0,
+        "writes": 0,
+        "early_mouse_click_blocked": true
+      }
+    ],
+    "receipt_sha256": "a03b38fdb174d5f0c6c4338157a09edfc4af7cf15068ebe397f7890fa0d3b248"
+  },
+  "staged_real_hosted_runtime": {
+    "deployed_source_test": false,
+    "candidate_overrides_only": [
+      "app.js",
+      "browser-entry.mjs"
+    ],
+    "dashboard_delay_ms": 1500,
+    "checks": [
+      "Onboarding before sources; written replies without voice folder",
+      "Actual rule-based evidence review and protocol tool trace",
+      "Markdown export with actual quoted source",
+      "Real PDF extraction in browser",
+      "PDF answer cites actual first-page text",
+      "Corrupt upload has visible inline error and saves no source",
+      "Full workspace backup downloads",
+      "Concurrent tabs preserve both writes",
+      "Storage failure rolls back unsaved mutation",
+      "Fresh browser restores only after explicit Open this copy",
+      "Workspace copy controls fit all six sizes"
+    ],
+    "errors": [],
+    "receipt_sha256": "f3668c21d602eb01b5c341515b3f68e9ab95b0c97f811cb66794e55b13c401b2",
+    "secret_persisted": false
+  },
+  "publication": "The repaired runtime was subsequently deployed and passed the separate published_runtime_validation below. Earlier staged test evidence is preserved with its original scope.",
+  "published_runtime_validation": {
+    "checked_at": "2026-09-07T14:17:45.372Z",
+    "checks": [
+      "Onboarding before sources; written replies without voice folder",
+      "Actual rule-based evidence review and protocol tool trace",
+      "Markdown export with actual quoted source",
+      "Real PDF extraction in browser",
+      "PDF answer cites actual first-page text",
+      "Corrupt upload has visible inline error and saves no source",
+      "Full workspace backup downloads",
+      "Concurrent tabs preserve both writes",
+      "Storage failure rolls back unsaved mutation",
+      "Fresh browser restores only after explicit Open this copy",
+      "Workspace copy controls fit all six sizes"
+    ],
+    "errors": [],
+    "python_install_required": false,
+    "provider_key_required": false,
+    "voice_folder_required": false,
+    "source_commit": "9e3b7a0876a2a52dade2623505931c39fe5427d2",
+    "source_overrides_used": false
+  }
+}

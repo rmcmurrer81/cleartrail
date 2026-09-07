@@ -1,0 +1,16 @@
+{
+  "schema": "cleartrail.startup.v1",
+  "contract": "Start after all five UI scripts have loaded",
+  "files": {
+    "app.js": {
+      "sha256": "7857d37a1e868bbd3a3db8ece5b3917ee089da51089e84ad5c7d495723994af7",
+      "bytes": 14799
+    },
+    "browser-entry.mjs": {
+      "sha256": "5273a2f8c9e2beb5e83070d434a98206f7a9e349ca536c16c2d75b27c8f1f10d",
+      "bytes": 7185
+    }
+  },
+  "validation": "../docs/startup-race-validation.json",
+  "source_only_note": "The docs path belongs to the source checkout; the static build includes this integrity record."
+}

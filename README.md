@@ -85,3 +85,12 @@ The default written Sarah assistant is bounded retrieval and workflow logic, not
 The September 7 fixed-4 build uses separate Overview, Sources, Versions, Review and Sarah screens. The current workflow is checked at 3440×1311, 1920×1080, 1366×768, 768×1024, 390×844 and 320×568. Sources, replies and results use Previous/Next controls instead of requiring long page scrolling. Exact source pages are measured to fit and preserve every original character, including line breaks and Unicode. Search results open the matching original text. The source upload form keeps earlier revisions separate.
 
 The Windows ZIP includes its own runtime and works without an installed model or provider key. Its optional custom voice still uses the separate owner voice pack. The separate ordinary-browser edition is included under `browser/`; BROWSER-BUILD.md explains its pinned build and static hosting. The Windows ZIP and the browser edition use separate storage.
+
+
+## Browser startup repair — September 7, 2026
+
+The browser edition now waits for every dashboard/navigation script before starting the workspace. This fixes an intermittent blank workspace or “renderDashboard is not defined” error on a fresh or slower connection. The local server edition is unchanged.
+
+Six Edge regression cases deliberately delay scripts, restore a saved workspace, and exercise a failed download with Retry. The same runtime repair also passed eleven workflow checks on the published private build, including PDF extraction/citations, visible upload errors, export/restore, concurrent tabs, storage rollback, and six screen sizes. These are engineering checks; owner acceptance and contest submission remain pending. No provider calls were made. See `docs/startup-race-validation.json`.
+
+To repeat the script-loading regression, install Playwright and Microsoft Edge for development, then run `node tests/startup-race.cjs`. `CLEARTRAIL_PLAYWRIGHT` may identify an existing Playwright installation. This test uses a labelled read-only backend fixture; it does not claim to repeat the full published Python runtime test.

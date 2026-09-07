@@ -33,6 +33,7 @@ try{
  await bridge.initialize({runtimeURL:new URL('./runtime/pyodide/',import.meta.url).href,entrypoint:'browser_adapter',files:manifest.files.map(f=>({...f,url:new URL(f.url,import.meta.url).href})),extraPaths:['/app/vendor/pypdf.zip']});
  await lock(()=>sync());window.clearTrailBackend={fetch:request};
  for(const name of ['app.js','dashboard.js','voice-ui.js','fixed-workspace.js','responsive-navigation.js'])await script(name);
+ await window.clearTrailStart();
  document.querySelectorAll('#mode option').forEach(o=>{if(o.value!=='sarah')o.remove()});byId('mode').value='sarah';document.querySelector('.advanced-assistant').hidden=true;
  window.queueSarahReply=()=>{byId('voiceReplay').hidden=true;byId('voicePause').hidden=true;};byId('voiceToggle').hidden=true;byId('voiceReplay').hidden=true;byId('voiceState').textContent='Written replies · no setup or credits';
  document.querySelector('header>small').innerHTML='YOUR RECORDS · SAVED IN THIS BROWSER<br>Free conversation and evidence review';

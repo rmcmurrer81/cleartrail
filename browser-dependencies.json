@@ -334,8 +334,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 14835,
-      "sha256": "5feaa0ad97799881d57b02938801e28d22fe60e4cf8c9221ba59000ed74f7215"
+      "bytes": 14799,
+      "sha256": "7857d37a1e868bbd3a3db8ece5b3917ee089da51089e84ad5c7d495723994af7"
     },
     {
       "path": "assistant_chat.py",
@@ -344,8 +344,8 @@
     },
     {
       "path": "browser-entry.mjs",
-      "bytes": 7193,
-      "sha256": "6e6829ea4a83d781a8d048a9358df2ae675ba08f5277e01a061e35d9469bdd11"
+      "bytes": 7185,
+      "sha256": "5273a2f8c9e2beb5e83070d434a98206f7a9e349ca536c16c2d75b27c8f1f10d"
     },
     {
       "path": "browser-files.json",
@@ -491,6 +491,11 @@
       "path": "webmcp.mjs",
       "bytes": 2436,
       "sha256": "30c2be3d507307613c793da715925ed3c3fe8a0ac519e8baf2641a2160a9c1bc"
+    },
+    {
+      "path": "startup-integrity.json",
+      "bytes": 560,
+      "sha256": "02b8941cca4d696e2f325420ffa88156c07a7247052635406ca61fcebd5a4dfe"
     }
   ]
 }
