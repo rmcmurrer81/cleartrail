@@ -1,0 +1,7 @@
+Third-party source and license notices
+
+Pyodide 314.0.6, unmodified distribution; source: https://github.com/pyodide/pyodide/tree/314.0.6
+Python 3.14.2 standard library; source: https://github.com/python/cpython/tree/v3.14.2
+pypdf 6.10.2, unmodified pure-Python package; source: https://github.com/py-pdf/pypdf/tree/6.10.2
+
+The respective upstream license texts are included here. Pyodide's linked source includes its dependency build recipes and their source locations. Our application and bridge code are separate from those upstream libraries.

@@ -1,0 +1,32 @@
+{
+  "files": [
+    {
+      "path": "browser_adapter.py",
+      "url": "./browser_adapter.py",
+      "sha256": "0702362056175aab7956e01bc63cd35fd81b7323b1c55b1e957ef1ffe2ff8c94"
+    },
+    {
+      "path": "evidence.py",
+      "url": "./evidence.py",
+      "sha256": "94a2f0e49b178bc23601cc49cf9414624ab9d11bae0766cd61e1602678fcae55"
+    },
+    {
+      "path": "sarah_evidence.py",
+      "url": "./sarah_evidence.py",
+      "sha256": "d61a51e8c1ed364ff5d2db7b78cbf1a08e71384a002886f1fd51c7b74c285b3c"
+    },
+    {
+      "path": "assistant_chat.py",
+      "url": "./assistant_chat.py",
+      "sha256": "b66338ab81502f1b25b73921940936c5e089dd5ee0e9edf2db1af9077055f55b"
+    },
+    {
+      "path": "vendor/pypdf.zip",
+      "url": "./vendor/pypdf.zip",
+      "sha256": "b71475358d069f9e389ba481061d57d68a9fc26dae58dafc38684f82ed689677"
+    }
+  ],
+  "runtime": "Pyodide 314.0.6",
+  "pypdf": "6.10.2",
+  "no_external_provider": true
+}

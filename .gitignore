@@ -1,0 +1,24 @@
+
+# Local build/runtime and private owner state
+build/
+.build-cache/
+runtime/
+.venv/
+venv/
+data/
+attachments/
+exports/
+artifacts/
+*.sqlite3*
+.env
+.env.*
+!*.example
+*-token.txt
+judge-config.json
+sarah-voice-pack/
+*.wav
+*.mp4
+*.jpg
+*.jpeg
+*.png
+__pycache__/
